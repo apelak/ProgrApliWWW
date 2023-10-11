@@ -1,0 +1,136 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: #433C85;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+.zakladki{
+    font-size: 40px;
+    text-align: center;
+}
+img{
+    width: auto;
+    height: auto;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.zdheader{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.opis_strony{
+    position: static;
+    float: center;
+    width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+table{
+    width: 1000px;
+}
+th{
+    font-size: 20px;
+}
+td,th{
+    border: solid white
+}
+a{
+    color: white;
+}
+a:visited{
+    color:white;
+}
+.kontakt{
+    text-align: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.titanic{
+    width: 33%;
+    margin-left: 10%;
+    float: left;
+    display: block;
+}
+.titanic1{
+    width: 40%;
+    float: left;
+    text-align: left;
+    margin-right: 10%;
+}
+.titanic2{
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+}
+.ben__hur_zd{
+
+    margin-left: 200px;
+    text-align: center;
+    display: block;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+.ben_hur1{
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.wladca1{
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+pre{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.przeminelozwiatrem1{
+    float: left;
+}
+.przeminelozwiatrem2{
+    margin-top: 20px;
+    margin-left: 490px;
+    margin-right: 120px;
+}
+.przeminelozwiatrem3{
+    float: left;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.westsidestory_zd{
+    margin-left: 225px;
+}
+.westsidestory{
+    float: left;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.pacjentzd{
+    float: left;
+}
+.pacjent1{
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+.pacjent2{
+    float: left;
+    margin-left: 220px;
+}

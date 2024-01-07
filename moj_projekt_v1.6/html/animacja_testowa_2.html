@@ -1,0 +1,24 @@
+
+<body>
+    <div id="animacjaTestowa2" class="test-block">
+        Najedź kursorem a się powiększę
+    </div>
+        <script>
+            $("#animacjaTestowa2").on({
+                "mouseover" : function() {
+                    $(this).animate({
+                        width: 500,
+                        fontSize: "2em"
+                    }, 800);
+            },
+            "mouseout" : function(){
+                $(this).animate({
+                    width: 200,
+                    fontSize: "20px"
+                }, 800);
+            }
+        });
+        </script>
+
+
+</body>

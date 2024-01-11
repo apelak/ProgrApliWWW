@@ -22,6 +22,7 @@ function PokazProdukt() {
             echo '<td class="tdid"><b>' . $row['id'] . '<b></td>';
             echo '<td class="tdnazwa"><b>' . $row['nazwa'] . '<b></td>';
             echo '<td class="tdkategoria"><b>Kategoria: ' . $row['nazwa_kategorii'] . '</b></td>';
+            echo '<td class="tdcena"><b>' . $row['cena_netto']*$row['podatek_vat'] . 'zł<b></td>';
             echo '<td class="tddodajdokoszyka"><button onclick="dodajDoKoszyka(' . $row['id'] . ', 1); return false;"><b>Dodaj do koszyka</b></button></td>';
             echo '</tr>';
         }

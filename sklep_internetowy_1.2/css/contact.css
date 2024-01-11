@@ -1,0 +1,35 @@
+body{
+    background-color: #433C85;
+    color: white;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+table{
+    width:650px
+}
+input[type=submit]{
+    background-color: #49aaff;
+    color: aliceblue;
+    font-size: 24px;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    border: 1px solid #49aaff;
+    text-transform: uppercase;
+}
+input[type=submit]:hover{
+    background-color: aliceblue;
+    color: #49aaff;
+    border: 1px solid #49aaff;
+}
+input[type=text]{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+}

@@ -135,8 +135,5 @@ echo '<table><tr><th>ID i Nazwa</th><th>Edytuj</th><th>Usuń</th></tr>' . PokazK
 if (isset($_GET['action']) && $_GET['action'] == 'usun') {
     UsunKategorie();
 }
-if (isset($_GET['action']) && $_GET['action'] == 'edytuj') {
-    UsunKategorie();
-}
 
 ?>

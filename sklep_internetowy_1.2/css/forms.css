@@ -3,9 +3,12 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #433C85;
+    text-align: center;
 }
 table {
     border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
   }
 table td a{
     text-decoration: none;

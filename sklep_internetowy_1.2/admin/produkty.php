@@ -136,7 +136,7 @@ function PokazProdukt()
     echo '<h1 class="naglowek">Lista produktów</h1><center><table>';
     if ($result) {
         while ($row = mysqli_fetch_array($result)) {
-            echo '<tr><td class="tdid"><b>' . $row['id'] . '<b></td><td class="tdnazwa"><b>' . $row['nazwa'] . '<b></td>';
+            echo '<tr><td class="tdid"><b>' . $row['id'] . '<b></td><td class="tdnazwa"><b>' . $row['nazwa'] . '<b> '. $row['cena_netto'].'zl netto</td>';
             echo '<td class="tdusun"><a href="admin.php?action=usunprodukt&id=' . $row['id'] . '"><b>Usuń</b></a></td>';
             echo '<td class="tdedytuj"><a href="admin.php?funkcja=edytuj&id=' . $row['id'] . '"><b>Edytuj</b></a></td></tr>';
         }

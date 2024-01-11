@@ -11,12 +11,12 @@ function DodajKategorie(){
                 <table class="dodaj">
                     <tr><td class="add_4t"><b>Nazwa kategorii: <b/></td><td><input type="text" name="nazwa_kategorii_add" required/></td></tr>
                     <tr><td class="add_4t"><b>Matka kategorii: <b/></td><td><input type="number "name="matka_kategorii_add" required/></td></tr>
-                    <tr><td>&nbsp;</td><td><input type="submit" name="x3_submit" class="dodaj" value="Dodaj" /></td></tr>
+                    <tr><td>&nbsp;</td><td><input type="submit" name="dodaj_kategorie" class="dodaj" value="Dodaj" /></td></tr>
                 </table>
             </form>
     </div>
     ';
-    if (isset($_POST['x3_submit'])) {
+    if (isset($_POST['dodaj_kategorie'])) {
         $nazwa = $_POST['nazwa_kategorii_add'];
         $matka = $_POST['matka_kategorii_add'];
 
@@ -24,7 +24,7 @@ function DodajKategorie(){
         $result = mysqli_query($link, $query);
 
         if ($result) {           
-            echo "<script>window.location.href='kategorie.php';</script>";
+            echo "<script>window.location.href='admin.php';</script>";
             exit();
         } else {
             echo "<center>Błąd podczas dodawania kategorii: " . mysqli_error($link)."</center>";
@@ -43,7 +43,7 @@ function UsunKategorie()
         $result = mysqli_query($link, $query);
 
         if ($result) {         
-            echo "<script>window.location.href='kategorie.php';</script>";
+            echo "<script>window.location.href='admin.php';</script>";
             exit();
         } else {
             echo "<center>Błąd podczas usuwania kategorii: " . mysqli_error($link)."</center>";
@@ -69,12 +69,12 @@ function EdytujKategorie()
                 <table class="edycja">
                     <tr><td class="edit_4t"><b>Nazwa kategorii: <b/></td><td><input type="text" name="nazwa_kategorii" value='.$row['nazwa'].' /></td></tr>
                     <tr><td class="edit_4t"><b>Matka kategorii: <b/></td><td><input type="number" name="matka_kategorii"value="'.$row['matka'].'"/></td></tr>
-                    <tr><td>&nbsp;</td><td><input type="submit" name="x2_submit" class="edycja" value="Edytuj" /></td></tr>
+                    <tr><td>&nbsp;</td><td><input type="submit" name="edytuj_kategorie" class="edycja" value="Edytuj" /></td></tr>
                 </table>
             </form>
     </div>
     ';
-    if (isset($_POST['x2_submit'])&& isset($_GET['id'])) {
+    if (isset($_POST['edytuj_kategorie'])&& isset($_GET['id'])) {
         $id = $_GET['id'];
         $nazwa = $_POST['nazwa_kategorii'];
         $matka = $_POST['matka_kategorii'];
@@ -114,7 +114,7 @@ function PokazKategorie($matka = 0, $ile = 0)
             }
 
             $tableContent .= '<td><b><span style="color:#008000;">' . $row['id'] . '</span> ' . $row['nazwa'] . '</b></td>';
-            $tableContent .= '<td></td><td><a href="?id=' . $row['id'] . '">Edytuj</a></td>';
+            $tableContent .= '<td><a href="?id=' . $row['id'] . '&action=edytuj">Edytuj</a></td>';
             $tableContent .= '<td><a href="?id=' . $row['id'] . '&action=usun">Usuń</a></td>';
             $tableContent .= '</tr>';
 
@@ -133,6 +133,9 @@ echo '<table><tr><th>ID i Nazwa</th><th>Edytuj</th><th>Usuń</th></tr>' . PokazK
 
 
 if (isset($_GET['action']) && $_GET['action'] == 'usun') {
+    UsunKategorie();
+}
+if (isset($_GET['action']) && $_GET['action'] == 'edytuj') {
     UsunKategorie();
 }
 
